@@ -13,7 +13,6 @@ public class FileService {
 	public List<Sales> read(String filePath) {
 	
 	String line;
-	int index = 0;
 	
 	List<Sales> teslaData = new ArrayList<>();
 		
