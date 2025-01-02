@@ -28,11 +28,11 @@ public class Sales {
 	public void setmonthYear(YearMonth monthYear) {
 		this.monthYear = monthYear;
 	}
-	public int getSalesAMount() {
+	public int getSalesAmount() {
 		return salesAmount;
 	}
-	public void setSalesAMount(int salesAMount) {
-		this.salesAmount = salesAMount;
+	public void setSalesAmount(int salesAmount) {
+		this.salesAmount = salesAmount;
 	}
 
 	@Override
