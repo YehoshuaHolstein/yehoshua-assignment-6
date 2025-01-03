@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class SalesService {
 	
-	public void salesGroupBy(List<Sales> salesData) {		
+	public void salesGroupByYear(List<Sales> salesData) {		
 		Map<Integer, Integer> groupedByYear = salesData.stream().collect
 			  (Collectors.groupingBy(Sales::getYear,
 				Collectors.summingInt(Sales::getSalesAmount)));
