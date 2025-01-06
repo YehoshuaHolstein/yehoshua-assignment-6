@@ -27,7 +27,7 @@ public class TeslaSalesApplication {
 		System.out.println("Model X Yearly Sales Report");
 		System.out.println("---------------------");
 		List<Sales> modelXData = fileService.read("modelX.csv");
-		salesService.salesGroupByYear(modelSData);
+		salesService.salesGroupByYear(modelXData);
 		System.out.println("The best month for Model X was: " + salesService.salesMaxMonth(modelXData));
         System.out.println("The worst month for Model X was: " + salesService.salesMinMonth(modelXData));
 		System.out.println("");
