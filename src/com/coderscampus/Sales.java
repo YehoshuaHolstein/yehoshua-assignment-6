@@ -13,10 +13,11 @@ public class Sales {
 	}
 
 	public YearMonth getmonthYear() {return monthYear;}
-	public int getYear() {return monthYear.getYear();}
-	public void setMonthYear(YearMonth monthYear) {this.monthYear = monthYear;}
+	public void setMonthYear(YearMonth monthYear) {this.monthYear = monthYear;}	
 	public int getSalesAmount() {return salesAmount;}
 	public void setSalesAmount(int salesAmount) {this.salesAmount = salesAmount;}
+	
+	public int getYear() {return monthYear.getYear();}
 
 	@Override
 	public String toString() {return "Sales [monthYear=" + monthYear + ", salesAmount=" + salesAmount + "]";}
