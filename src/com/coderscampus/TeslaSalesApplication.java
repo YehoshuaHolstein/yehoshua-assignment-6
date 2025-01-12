@@ -8,30 +8,13 @@ public class TeslaSalesApplication {
 		FileService fileService = new FileService();
 		SalesService salesService = new SalesService();
 		
-		System.out.println("Model 3 Yearly Sales Report");
-		System.out.println("---------------------");
-		List<Sales> model3Data = fileService.read("model3.csv");
-		salesService.salesGroupByYear(model3Data);
-		System.out.println("The best month for Model 3 was: " + salesService.salesMaxMonth(model3Data));
-        System.out.println("The worst month for Model 3 was: " + salesService.salesMinMonth(model3Data));
-		System.out.println("");
+		String[] models = {"3", "S", "X"};
 		
-		System.out.println("Model S Yearly Sales Report");
-		System.out.println("---------------------");
-		List<Sales> modelSData = fileService.read("modelS.csv");
-		salesService.salesGroupByYear(modelSData);
-		System.out.println("The best month for Model S was: " + salesService.salesMaxMonth(modelSData));
-        System.out.println("The worst month for Model S was: " + salesService.salesMinMonth(modelSData));
-		System.out.println("");
-		
-		System.out.println("Model X Yearly Sales Report");
-		System.out.println("---------------------");
-		List<Sales> modelXData = fileService.read("modelX.csv");
-		salesService.salesGroupByYear(modelXData);
-		System.out.println("The best month for Model X was: " + salesService.salesMaxMonth(modelXData));
-        System.out.println("The worst month for Model X was: " + salesService.salesMinMonth(modelXData));
-		System.out.println("");
-	
+		for (String model : models) {
+			List<Sales> data = fileService.read("model" + model + ".csv");
+			salesService.generateReport(data, model);
+		}
+			
 	}
 
 }
